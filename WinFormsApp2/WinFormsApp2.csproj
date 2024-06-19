@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="C:\Users\paynek\.nuget\packages\taskdialoglibrary\1.0.1\contentFiles\any\net6.0-windows7.0\readme.md" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="readme.md" />
   </ItemGroup>
 
@@ -21,11 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="TaskDialogLibrary" Version="1.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\WinFormsResourceLibarary\WinFormsResourceLibrary.csproj" />
+    <ProjectReference Include="..\WinFormsApp1\WinFormsApp1.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,8 +35,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-	<ItemGroup>
-		<!-- global usings -->
-		<Using Include="WinFormsApp1.Classes.Dialogs" Static="True" />
-	</ItemGroup>
 </Project>

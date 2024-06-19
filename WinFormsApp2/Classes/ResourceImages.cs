@@ -1,9 +1,10 @@
-﻿using WinFormsApp1.Properties;
-using WinFormsResourceLibrary.Models;
+﻿using WinFormsApp2.Properties;
 using WinFormsResourceLibrary.Classes;
+using WinFormsResourceLibrary.Models;
+
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 
-namespace WinFormsApp1.Classes;
+namespace WinFormsApp2.Classes;
 
 /// <summary>
 /// Provides access to resource images by loading them once
@@ -29,14 +30,6 @@ public sealed class ResourceImages
     /// </summary>
     public List<ResourceItem> BitMaps;
 
-    /// <summary>
-    /// Are there any icons in resources
-    /// </summary>
-    public bool HasIcons => Icons.Any();
-    /// <summary>
-    /// Are there any icons in resources
-    /// </summary>
-    public bool HasBitmaps => BitMaps.Any();
 
     private ResourceImages()
     {
@@ -46,8 +39,5 @@ public sealed class ResourceImages
             .OrderBy(resourceItem => resourceItem.Name)
             .ToList();
 
-        Icons = Images.Where(resourceItem => resourceItem.IsIcon)
-            .OrderBy(resourceItem => resourceItem.Name)
-            .ToList();
     }
 }

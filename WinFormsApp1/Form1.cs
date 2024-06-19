@@ -1,7 +1,6 @@
 using WinFormsApp1.Classes;
-using WinFormsResourceLibrary;
+using WinFormsResourceLibrary.Models;
 
-using static TaskDialogLibrary.Dialogs;
 
 #pragma warning disable CS8622 // Nullability of reference types in type of parameter doesn't match the target delegate (possibly because of nullability attributes).
 #pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
@@ -28,7 +27,7 @@ public partial class Form1 : Form
             BitmapListBox.SelectedIndex = BitmapListBox.FindString("earth-11602");
         }
 
-        var images = ResourceImages.Instance.Images();
+        var images = ResourceImages.Instance.Images;
         imageCountLabel.Text = $"There are {images.Count} in this project's resources";
     }
 
@@ -62,11 +61,6 @@ public partial class Form1 : Form
 
     private void AboutButton_Click(object sender, EventArgs e)
     {
-        AutoCloseDialog(
-            AboutButton, 
-            "By Karen Payne", 
-            "Reading project resources", 
-            ResourceImages.Instance.Icons.FirstOrDefault()!.Icon,
-            3);
+        Information(AboutButton, "Resource helpers");
     }
 }

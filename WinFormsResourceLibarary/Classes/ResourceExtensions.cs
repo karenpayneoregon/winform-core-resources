@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Resources;
 
-namespace WinFormsResourceLibrary;
+namespace WinFormsResourceLibrary.Classes;
 
 public static class ResourceExtensions
 {
@@ -12,13 +12,11 @@ public static class ResourceExtensions
         {
 
             var names = new List<string>();
-            var resourceSet = sender
-                .GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+            var resourceSet = sender.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
 
-            names.AddRange(
-                from DictionaryEntry dictionaryEntry in resourceSet
-                where dictionaryEntry.Value is Image || dictionaryEntry.Value is Icon
-                select dictionaryEntry.Key.ToString());
+            names.AddRange(resourceSet!.Cast<DictionaryEntry>()
+                .Where(dictionaryEntry => dictionaryEntry.Value is Image or Icon)
+                .Select(dictionaryEntry => dictionaryEntry.Key.ToString()));
 
             return names;
 

@@ -1,5 +1,4 @@
-﻿
-namespace WinFormsResourceLibrary;
+﻿namespace WinFormsResourceLibrary.Models;
 
 public class ResourceItem
 {

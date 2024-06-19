@@ -1,6 +1,7 @@
 ﻿using System.Resources;
+using WinFormsResourceLibrary.Models;
 
-namespace WinFormsResourceLibrary;
+namespace WinFormsResourceLibrary.Classes;
 
 /// <summary>
 /// Read images from current project resources
@@ -20,7 +21,7 @@ public class ImageHelper
         {
 
             ResourceItem item = new() { Name = name, IsIcon = false };
-            
+
             if (sender.GetObject(name) is Icon icon)
             {
                 item.Image = ((Icon)sender.GetObject(name))?.ToBitmap();
@@ -33,7 +34,7 @@ public class ImageHelper
             }
 
             items.Add(item);
-            
+
         }
 
         return items;
