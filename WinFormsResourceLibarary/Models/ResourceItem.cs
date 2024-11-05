@@ -1,5 +1,8 @@
 ﻿namespace WinFormsResourceLibrary.Models;
 
+/// <summary>
+/// Represents a resource item that can be either a bitmap or an icon.
+/// </summary>
 public class ResourceItem
 {
     /// <summary>

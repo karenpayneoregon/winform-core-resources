@@ -7,7 +7,7 @@ using WinFormsResourceLibrary.Models;
 namespace WinFormsApp2.Classes;
 
 /// <summary>
-/// Provides access to resource images by loading them once
+/// Provides a singleton instance to access icon and bitmap images from project resources.
 /// </summary>
 public sealed class ResourceImages
 {
@@ -30,7 +30,13 @@ public sealed class ResourceImages
     /// </summary>
     public List<ResourceItem> BitMaps;
 
-
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ResourceImages"/> class.
+    /// </summary>
+    /// <remarks>
+    /// This constructor initializes the <see cref="Images"/>, <see cref="Icons"/>, and <see cref="BitMaps"/> properties
+    /// by loading resource items from the project's resources.
+    /// </remarks>
     private ResourceImages()
     {
         Images = ImageHelper.ResourceItemList(Resources.ResourceManager);

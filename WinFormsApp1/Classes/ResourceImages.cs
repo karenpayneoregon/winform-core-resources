@@ -6,7 +6,8 @@ using WinFormsResourceLibrary.Classes;
 namespace WinFormsApp1.Classes;
 
 /// <summary>
-/// Provides access to resource images by loading them once
+/// Provides access to icon and bitmap images from the project's resources.
+/// This class implements the singleton pattern to ensure a single instance is used throughout the application.
 /// </summary>
 public sealed class ResourceImages
 {
@@ -30,8 +31,11 @@ public sealed class ResourceImages
     public List<ResourceItem> BitMaps;
 
     /// <summary>
-    /// Are there any icons in resources
+    /// Gets a value indicating whether there are any icons available in the resources.
     /// </summary>
+    /// <value>
+    /// <c>true</c> if there are icons available; otherwise, <c>false</c>.
+    /// </value>
     public bool HasIcons => Icons.Any();
     /// <summary>
     /// Are there any icons in resources

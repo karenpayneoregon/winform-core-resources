@@ -10,9 +10,10 @@ public class ImageHelper
 {
 
     /// <summary>
-    /// Get all bitmap and icon resources
+    /// Retrieves a list of resource items from the specified <see cref="ResourceManager"/>.
     /// </summary>
-    /// <returns></returns>
+    /// <param name="sender">The <see cref="ResourceManager"/> instance containing the resources.</param>
+    /// <returns>A list of <see cref="ResourceItem"/> objects representing the resources.</returns>
     public static List<ResourceItem> ResourceItemList(ResourceManager sender)
     {
         var items = new List<ResourceItem>();

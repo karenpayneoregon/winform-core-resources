@@ -123,9 +123,9 @@ namespace WinFormsApp2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tuesday {
+        internal static System.Drawing.Bitmap Tuesday {
             get {
-                object obj = ResourceManager.GetObject("tuesday", resourceCulture);
+                object obj = ResourceManager.GetObject("Tuesday", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WinFormsApp1.Classes;
+﻿namespace WinFormsApp1.Classes;
 /// <summary>
 /// Provides methods for displaying dialog boxes.
 /// </summary>
 public static class Dialogs
 {
     /// <summary>
-    /// Displays an information dialog box.
+    /// Displays an information dialog box with a specified heading and an optional footer.
     /// </summary>
-    /// <param name="owner">The control that owns the dialog box.</param>
-    /// <param name="heading">The heading text of the dialog box.</param>
-    /// <param name="useFooter">Indicates whether to display a footer in the dialog box. Default is true.</param>
+    /// <param name="owner">The control that will own the modal dialog box.</param>
+    /// <param name="heading">The heading text to be displayed in the dialog box.</param>
+    /// <param name="useFooter">A boolean value indicating whether to display a footer in the dialog box.</param>
     public static void Information(Control owner, string heading, bool useFooter = true)
     {
         TaskDialogButton okayButton = new("OK");
